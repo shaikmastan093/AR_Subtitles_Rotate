@@ -458,16 +458,7 @@ AFRAME.registerComponent("play-audio", {
     const sound = this.data.sound;
     const subtitleContainer = document.getElementById("subtitle-container");
 
-    // Load subtitles (assuming it's a JSON file)
-    // console.log('dhaneskotti',this.data.subtitles);
-    // fetch(this.data.subtitles)
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     subtitles.push(data);
-    //   })
-    //   .catch((err) => {
-    //     console.error("Subtitle loading error:", err);
-    //   });
+    
 
     function addSubtitles(sub) {
       fetch(sub)
@@ -484,21 +475,7 @@ AFRAME.registerComponent("play-audio", {
       subtitles = null;
     }
 
-    // function iosEnabled() {
-    //   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    //     console.log("This is an iOS device.");
-    //     tap.style.display = "flex";
-    //     tap.style.backgroundColor = "#4d4d4dbb";
-    //   }
-    // }
-    // function iosDisabled() {
-    //   if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-    //     console.log("This is an iOS device.");
-    //     tap.style.backgroundColor = "transparent";
-    //     tap.style.display = "none";
-    //   }
-    // }
-
+    
     isAudiPlaying = false;
 
     entity.addEventListener("targetFound", (event) => {

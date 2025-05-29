@@ -32,7 +32,19 @@
   </head>
 
   <style>
-   
+    #subtitle-container {
+        position: fixed;
+        bottom: 5%;               /* Stick to bottom of screen */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        z-index: 9999;            /* Always on top */
+        pointer-events: none; 
+    }
 
     /* Button Styles */
     .scan-buttons {
@@ -553,21 +565,11 @@
     <script src="./ar.js"></script>
 
     <script>
-     
+      // You can change the subtitle text from JavaScript like this
+      const subtitle = document.getElementById('subtitle-container');
+      subtitle.innerText = "Scan the image to start!";
     </script>
 
-     <div id="subtitle"
-       style="
-         position: fixed;
-         bottom: 5%;
-         width: 100%;
-         text-align: center;
-         font-size: 1.5em;
-         color: white;
-         text-shadow: 2px 2px 5px black;
-         z-index: 9999;
-         pointer-events: none;
-       ">
-  </div>
+    
   </body>
 </html>

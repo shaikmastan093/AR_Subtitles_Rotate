@@ -545,3 +545,14 @@ tap.addEventListener("click", () => {
 
 // document.addEventListener("touchstart", unlockAudio, { once: true });
 // document.addEventListener("click", unlockAudio, { once: true });
+ const subtitle = document.getElementById('subtitle');
+ const mindarTarget = document.querySelector('[mindar-image-target]');
+
+  mindarTarget.addEventListener('targetFound', () => {
+    subtitle.style.display = 'block';
+    subtitle.textContent = 'Hello, this is the subtitle!';
+  });
+
+  mindarTarget.addEventListener('targetLost', () => {
+    subtitle.style.display = 'none';
+  });

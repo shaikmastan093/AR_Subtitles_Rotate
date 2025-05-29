@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Welcome To Rudra Reality</title>
+    <div id="subtitle">My Subtitle</div>
 
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
@@ -32,19 +33,19 @@
   </head>
 
   <style>
-    #subtitle-container {
-        position: fixed;
-        bottom: 5%;               /* Stick to bottom of screen */
-        left: 0;
-        width: 100%;
-        text-align: center;
-        font-size: 1.5em;
-        color: white;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-        z-index: 9999;            /* Always on top */
-        pointer-events: none; 
-    }
+   #subtitle {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  z-index: 9999;
+  pointer-events: none;
+  text-align: center;
+}
 
     /* Button Styles */
     .scan-buttons {
@@ -565,9 +566,7 @@
     <script src="./ar.js"></script>
 
     <script>
-      // You can change the subtitle text from JavaScript like this
-      const subtitle = document.getElementById('subtitle-container');
-      subtitle.innerText = "Scan the image to start!";
+     
     </script>
 
     

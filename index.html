@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Welcome To Rudra Reality</title>
-    <div id="subtitle">My Subtitle</div>
 
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
@@ -33,11 +32,11 @@
   </head>
 
   <style>
-   #subtitle {
+  #subtitle {
   position: fixed;
   bottom: 5%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(0deg) !important;
   font-size: 1.5em;
   color: white;
   background: rgba(0, 0, 0, 0.6);
@@ -45,6 +44,7 @@
   z-index: 9999;
   pointer-events: none;
   text-align: center;
+  will-change: transform;
 }
 
     /* Button Styles */
@@ -183,6 +183,7 @@
   </style>
 
   <body>
+    <div id="subtitle">Hello, this is a subtitle.</div>
     <div id="example-scanning-overlay" class="hidden">
       <div class="inner">
         <div class="scanline"></div>
